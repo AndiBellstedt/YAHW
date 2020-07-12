@@ -20,7 +20,7 @@
     }
 
     process {
-        Write-PSFMessage -Level Host -Message "Hello World"
+        Write-PSFMessage -Level Host -Message "Say hello World"
     }
 
     end {
