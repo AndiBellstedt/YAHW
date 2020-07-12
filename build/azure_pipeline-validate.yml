@@ -1,0 +1,34 @@
+pool:
+  name: Hosted VS2017
+
+# Continuous integration only on branch Development
+trigger:
+  branches:
+    include:
+    - Development
+
+# Pull request validation only on branch master & development
+pr:
+  branches:
+    include:
+    - master
+    - Development
+
+steps:
+- task: PowerShell@2
+  displayName: Ensure prerequisites
+  inputs:
+    targetType: filePath
+    filePath: './build/vsts-prerequisites.ps1'
+
+- task: PowerShell@2
+  displayName: Validate code compliance
+  inputs:
+    targetType: filePath
+    filePath: './build/vsts-validate.ps1'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/TEST-*.xml'
+  inputs:
+    testResultsFormat: NUnit
+  condition: always()
