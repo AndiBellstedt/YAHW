@@ -3,7 +3,7 @@
     RootModule = 'YAHW.psm1'
 
     # Version number of this module.
-    ModuleVersion = '1.0.0'
+    ModuleVersion = '1.0.0.1'
 
     # ID used to uniquely identify this module
     GUID = 'c0000dcb-9beb-46ec-a0dc-78386891bb04'
@@ -63,7 +63,15 @@
         PSData = @{
 
             # Tags applied to this module. These help with module discovery in online galleries.
-            # Tags = @()
+            Tags = @(
+                'YAHW',
+                'YetAnotherHelloWorld',
+                'PSEdition_Core',
+                'PSEdition_Desktop',
+                'Windows',
+                'Linux',
+                'macOS'
+            )
 
             # A URL to the license for this module.
             LicenseUri   = 'https://github.com/AndiBellstedt/yahw/blob/master/LICENSE'
