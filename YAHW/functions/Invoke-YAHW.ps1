@@ -1,5 +1,5 @@
 ﻿function Invoke-YAHW {
-<#
+    <#
     .SYNOPSIS
         Invoke Yet Another Hello World
 
@@ -13,14 +13,17 @@
         Invoke Yet Another Hello World
 #>
     [CmdletBinding()]
-    param ()
+    param (
+        [string]
+        $Text
+    )
 
     begin {
 
     }
 
     process {
-        Write-PSFMessage -Level Host -Message "Say hello World"
+        Write-PSFMessage -Level Host -Message "Say hello World $Text"
     }
 
     end {
