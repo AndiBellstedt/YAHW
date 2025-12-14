@@ -6,12 +6,14 @@
     .DESCRIPTION
         Invoke Yet Another Hello World
 
+    .PARAMETER Text
+        Additional text to display
 
     .EXAMPLE
         PS C:\> Invoke-YAHW
 
         Invoke Yet Another Hello World
-#>
+    #>
     [CmdletBinding()]
     param (
         [string]
